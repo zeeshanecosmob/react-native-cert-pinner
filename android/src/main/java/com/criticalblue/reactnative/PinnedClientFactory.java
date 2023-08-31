@@ -28,8 +28,8 @@ public class PinnedClientFactory implements OkHttpClientFactory {
             client.certificatePinner(certificatePinner);
         }
         
-
-        return OkHttpClientProvider.enableTls12OnPreLollipop(client).build();
+        return client.build();
+        // return OkHttpClientProvider.enableTls12OnPreLollipop(client).build();
     }
 }
 
